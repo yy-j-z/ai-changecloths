@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+npm run check:web
+python -m ruff check server ai-service
+

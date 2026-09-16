@@ -1,0 +1,40 @@
+# Dependencies and virtual environments
+node_modules/
+.venv/
+.uv-cache/
+.uv-python/
+.uv-tools/
+.uv-bin/
+.ci-deps/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Build and coverage output
+dist/
+build/
+coverage/
+htmlcov/
+*.egg-info/
+
+# Local data and generated assets
+.env
+.env.local
+uploads/
+data/
+*.db
+*.sqlite3
+
+# Blender recovery files
+*.blend1
+*.blend2
+*.blend@
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

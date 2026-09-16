@@ -1,0 +1,33 @@
+name: quality
+
+on:
+  pull_request:
+  push:
+    branches: [main, dev]
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check:web
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements-dev.txt -r server/requirements.txt -r ai-service/requirements.txt
+      - run: python -m ruff check server ai-service
+      - run: python -m ruff format --check server ai-service
+      - run: cd server && python -m pytest -q
+      - run: cd ai-service && python -m pytest -q
+

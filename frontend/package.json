@@ -1,0 +1,38 @@
+{
+  "name": "@ai-fitting-mirror/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .ts,.vue --max-warnings 0",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@vueuse/core": "12.5.0",
+    "axios": "1.7.9",
+    "lucide-vue-next": "0.468.0",
+    "pinia": "2.3.0",
+    "three": "0.171.0",
+    "vue": "3.5.13",
+    "vue-router": "4.5.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.171.0",
+    "@typescript-eslint/eslint-plugin": "8.18.1",
+    "@typescript-eslint/parser": "8.18.1",
+    "@vitejs/plugin-vue": "5.2.1",
+    "@vue/test-utils": "2.4.6",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-vue": "9.32.0",
+    "typescript": "5.6.3",
+    "vite": "5.4.11",
+    "vitest": "2.1.8",
+    "vue-eslint-parser": "9.4.3",
+    "vue-tsc": "2.1.10"
+  }
+}
+
