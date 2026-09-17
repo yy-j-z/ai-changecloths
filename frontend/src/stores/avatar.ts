@@ -26,6 +26,7 @@ export const DEFAULT_AVATAR: AvatarConfig = {
     hairColor: '#241a17',
     garmentId: 'garment-tee-001',
     garmentColor: '#27695c',
+    garmentSize: 'M',
   },
 }
 
@@ -36,9 +37,13 @@ function cloneDefault(): AvatarConfig {
 export const useAvatarStore = defineStore('avatar', {
   state: (): AvatarConfig => cloneDefault(),
   actions: {
+    applyOutfit(garmentId: string, garmentColor: string, garmentSize: string) {
+      this.appearance.garmentId = garmentId
+      this.appearance.garmentColor = garmentColor
+      this.appearance.garmentSize = garmentSize
+    },
     reset() {
       Object.assign(this, cloneDefault())
     },
   },
 })
-

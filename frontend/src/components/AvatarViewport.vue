@@ -22,6 +22,12 @@ let frameId = 0
 const bodyParts: Record<string, THREE.Mesh> = {}
 const materials: Record<string, THREE.MeshStandardMaterial> = {}
 
+const GARMENT_PROFILES: Record<string, { scale: [number, number, number]; roughness: number }> = {
+  'garment-tee-001': { scale: [0.82, 0.78, 0.82], roughness: 0.75 },
+  'garment-shirt-001': { scale: [1.0, 1.0, 1.0], roughness: 0.55 },
+  'garment-jacket-001': { scale: [1.18, 1.14, 1.18], roughness: 0.68 },
+}
+
 function createMesh(
   name: string,
   geometry: THREE.BufferGeometry,
@@ -44,8 +50,14 @@ function applyConfig(config: AvatarConfig) {
   const hipScale = 0.85 + config.body.hip * 0.32
   const faceScale = 0.86 + config.face.faceWidth * 0.28
 
+  const garmentProfile =
+    GARMENT_PROFILES[config.appearance.garmentId] ?? GARMENT_PROFILES['garment-shirt-001']
   bodyParts.torso?.scale.set(weightScale * shoulderScale, heightScale, weightScale)
-  bodyParts.shirt?.scale.set(weightScale * shoulderScale * 1.04, heightScale, weightScale * 1.04)
+  bodyParts.shirt?.scale.set(
+    weightScale * shoulderScale * 1.04 * garmentProfile.scale[0],
+    heightScale * garmentProfile.scale[1],
+    weightScale * 1.04 * garmentProfile.scale[2],
+  )
   bodyParts.hips?.scale.set(weightScale * hipScale, 1, weightScale)
   bodyParts.head?.scale.set(faceScale, 1.02, 1)
   bodyParts.hair?.scale.set(faceScale * 1.04, 1.05, 1.04)
@@ -57,6 +69,7 @@ function applyConfig(config: AvatarConfig) {
   materials.skin?.color.set(config.appearance.skinColor)
   materials.hair?.color.set(config.appearance.hairColor)
   materials.garment?.color.set(config.appearance.garmentColor)
+  if (materials.garment) materials.garment.roughness = garmentProfile.roughness
 }
 
 onMounted(() => {
@@ -86,17 +99,51 @@ onMounted(() => {
   const trouser = new THREE.MeshStandardMaterial({ color: '#252a2d', roughness: 0.8 })
 
   const avatar = new THREE.Group()
-  avatar.add(createMesh('head', new THREE.SphereGeometry(0.3, 36, 24), materials.skin, [0, 2.72, 0]))
   avatar.add(
-    createMesh('hair', new THREE.SphereGeometry(0.315, 36, 20, 0, Math.PI * 2, 0, 1.8), materials.hair, [0, 2.78, -0.005]),
+    createMesh('head', new THREE.SphereGeometry(0.3, 36, 24), materials.skin, [0, 2.72, 0]),
   )
-  avatar.add(createMesh('torso', new THREE.CapsuleGeometry(0.43, 0.68, 8, 24), materials.skin, [0, 1.92, 0]))
-  avatar.add(createMesh('shirt', new THREE.CapsuleGeometry(0.45, 0.66, 8, 24), materials.garment, [0, 1.94, 0]))
+  avatar.add(
+    createMesh(
+      'hair',
+      new THREE.SphereGeometry(0.315, 36, 20, 0, Math.PI * 2, 0, 1.8),
+      materials.hair,
+      [0, 2.78, -0.005],
+    ),
+  )
+  avatar.add(
+    createMesh('torso', new THREE.CapsuleGeometry(0.43, 0.68, 8, 24), materials.skin, [0, 1.92, 0]),
+  )
+  avatar.add(
+    createMesh(
+      'shirt',
+      new THREE.CapsuleGeometry(0.45, 0.66, 8, 24),
+      materials.garment,
+      [0, 1.94, 0],
+    ),
+  )
   avatar.add(createMesh('hips', new THREE.CapsuleGeometry(0.4, 0.2, 8, 24), trouser, [0, 1.28, 0]))
-  avatar.add(createMesh('leftLeg', new THREE.CapsuleGeometry(0.16, 0.78, 8, 20), trouser, [-0.21, 0.65, 0]))
-  avatar.add(createMesh('rightLeg', new THREE.CapsuleGeometry(0.16, 0.78, 8, 20), trouser, [0.21, 0.65, 0]))
-  avatar.add(createMesh('leftArm', new THREE.CapsuleGeometry(0.12, 0.74, 8, 18), materials.skin, [-0.62, 1.9, 0]))
-  avatar.add(createMesh('rightArm', new THREE.CapsuleGeometry(0.12, 0.74, 8, 18), materials.skin, [0.62, 1.9, 0]))
+  avatar.add(
+    createMesh('leftLeg', new THREE.CapsuleGeometry(0.16, 0.78, 8, 20), trouser, [-0.21, 0.65, 0]),
+  )
+  avatar.add(
+    createMesh('rightLeg', new THREE.CapsuleGeometry(0.16, 0.78, 8, 20), trouser, [0.21, 0.65, 0]),
+  )
+  avatar.add(
+    createMesh(
+      'leftArm',
+      new THREE.CapsuleGeometry(0.12, 0.74, 8, 18),
+      materials.skin,
+      [-0.62, 1.9, 0],
+    ),
+  )
+  avatar.add(
+    createMesh(
+      'rightArm',
+      new THREE.CapsuleGeometry(0.12, 0.74, 8, 18),
+      materials.skin,
+      [0.62, 1.9, 0],
+    ),
+  )
   scene.add(avatar)
 
   const floor = new THREE.Mesh(
@@ -144,4 +191,3 @@ onBeforeUnmount(() => {
   renderer?.dispose()
 })
 </script>
-

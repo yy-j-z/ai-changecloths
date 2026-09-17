@@ -42,4 +42,3 @@ MORPH_Face_JawWidth
 5. 单个服装 GLB 尽量小于 10 MB，贴图优先使用 1K 或 2K。
 6. 在 Three.js 测试页验证骨骼、Morph Target、材质和动画。
 7. 在 `asset-licenses.csv` 登记来源及许可证。
-

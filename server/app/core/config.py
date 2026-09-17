@@ -12,6 +12,10 @@ class Settings:
     ai_service_url: str = os.getenv("AI_SERVICE_URL", "http://localhost:8001")
     cors_origins_raw: str = os.getenv("CORS_ORIGINS", "http://localhost:5173")
     upload_dir: str = os.getenv("UPLOAD_DIR", "uploads")
+    llm_provider: str = os.getenv("LLM_PROVIDER", "demo")
+    llm_model: str = os.getenv("LLM_MODEL", "")
+    llm_base_url: str = os.getenv("LLM_BASE_URL", "")
+    llm_api_key: str = os.getenv("LLM_API_KEY", "")
 
     @property
     def cors_origins(self) -> list[str]:

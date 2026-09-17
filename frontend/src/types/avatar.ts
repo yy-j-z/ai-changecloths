@@ -23,6 +23,7 @@ export interface AppearanceParameters {
   hairColor: string
   garmentId: string
   garmentColor: string
+  garmentSize: string
 }
 
 export interface AvatarConfig {
@@ -30,4 +31,3 @@ export interface AvatarConfig {
   face: FaceParameters
   appearance: AppearanceParameters
 }
-

@@ -15,4 +15,3 @@ describe('avatar store', () => {
     expect(avatar.body.weight).toBe(0.5)
   })
 })
-
