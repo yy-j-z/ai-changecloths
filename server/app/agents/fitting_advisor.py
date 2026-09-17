@@ -15,9 +15,7 @@ class FittingAdvisor:
     def __init__(self, planner: IntentPlanner | None = None) -> None:
         self.planner = planner or create_intent_planner()
 
-    def _search_with_fallback(
-        self, intent: AdvisorIntent
-    ) -> tuple[list, list[ToolEvent], int]:
+    def _search_with_fallback(self, intent: AdvisorIntent) -> tuple[list, list[ToolEvent], int]:
         """Search products with up to three relaxed attempts.
 
         Returns (products, events, fallback_level) where fallback_level is:
