@@ -118,8 +118,3 @@ powershell -ExecutionPolicy Bypass -File scripts/check.ps1
 | AI           | 人脸关键点、照片参数映射、尺码与搭配推荐        |
 | 3D 资产/集成 | Blender、骨骼、Morph Target、服装权重和穿模测试 |
 
-
-<<<<<<< HEAD
-=======
-##演示 修改 还原
->>>>>>> 4909129d5d6b25c995fa904c1864e614bf875927
