@@ -117,3 +117,6 @@ powershell -ExecutionPolicy Bypass -File scripts/check.ps1
 | 业务后端     | 用户、商品、数字人配置、收藏、试穿记录和后台    |
 | AI           | 人脸关键点、照片参数映射、尺码与搭配推荐        |
 | 3D 资产/集成 | Blender、骨骼、Morph Target、服装权重和穿模测试 |
+
+
+##演示 修改
