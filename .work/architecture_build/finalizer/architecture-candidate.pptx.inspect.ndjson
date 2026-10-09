@@ -1,0 +1,78 @@
+{"kind":"deck","id":"pr/wi7onr","name":"Deck"}
+{"kind":"layout","layoutId":"8600ce49-c2ca-4aec-88a2-64941c0c4a1d","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"8622feb2-4af2-4bfc-a275-68e45efce732","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/mm12e4","slide":1,"title":"形镜 AI 变装系统功能架构","textShapes":39}
+{"kind":"textbox","id":"sh/ehsnypsn","slide":1,"text":"形镜 AI 变装系统功能架构","textPreview":"形镜 AI 变装系统功能架构","textChars":14,"textLines":1,"bbox":[55,28,1490,48]}
+{"kind":"textbox","id":"sh/1kjm9kbe","slide":1,"text":"浏览器只访问业务 API；智能体通过白名单工具驱动推荐和 3D 换装","textPreview":"浏览器只访问业务 API；智能体通过白名单工具驱动推荐和 3D 换装","textChars":34,"textLines":1,"bbox":[55,78,1490,34]}
+{"kind":"shape","id":"sh/0ja50fat","slide":1,"bbox":[54,125,1492,100]}
+{"kind":"textbox","id":"sh/reh43atc","slide":1,"text":"接入层","textPreview":"接入层","textChars":3,"textLines":1,"bbox":[70,137,150,76]}
+{"kind":"textbox","id":"sh/qd8nu5sr","slide":1,"text":"用户 Web 端","textPreview":"用户 Web 端","textChars":8,"textLines":1,"bbox":[246,140,310.5,71]}
+{"kind":"textbox","id":"sh/dgzm5kb2","slide":1,"text":"3D 数字人工作台","textPreview":"3D 数字人工作台","textChars":9,"textLines":1,"bbox":[568.5,140,310.5,71]}
+{"kind":"textbox","id":"sh/cfq5wfah","slide":1,"text":"穿搭顾问对话","textPreview":"穿搭顾问对话","textChars":6,"textLines":1,"bbox":[891,140,310.5,71]}
+{"kind":"textbox","id":"sh/valofetg","slide":1,"text":"商家管理后台（可选）","textPreview":"商家管理后台（可选）","textChars":10,"textLines":1,"bbox":[1213.5,140,310.5,71]}
+{"kind":"shape","id":"sh/a9cn69sv","slide":1,"bbox":[54,237,1492,90]}
+{"kind":"textbox","id":"sh/w3adgred","slide":1,"text":"接口层","textPreview":"接口层","textChars":3,"textLines":1,"bbox":[70,249,150,66]}
+{"kind":"textbox","id":"sh/h4jepwvy","slide":1,"text":"统一业务入口  /api/v1","textPreview":"统一业务入口  /api/v1","textChars":15,"textLines":1,"bbox":[246,271,418,42]}
+{"kind":"textbox","id":"sh/a1svehw7","slide":1,"text":"认证与参数校验","textPreview":"认证与参数校验","textChars":7,"textLines":1,"bbox":[676,271,418,42]}
+{"kind":"textbox","id":"sh/v21wnmxs","slide":1,"text":"统一响应与错误处理","textPreview":"统一响应与错误处理","textChars":9,"textLines":1,"bbox":[1106,271,418,42]}
+{"kind":"textbox","id":"sh/8zqdcre1","slide":1,"text":"Vite 开发代理将 /api 请求转发到业务服务","textPreview":"Vite 开发代理将 /api 请求转发到业务服务","textChars":25,"textLines":1,"bbox":[246,240,1278,28]}
+{"kind":"shape","id":"sh/90jelwfm","slide":1,"bbox":[54,339,1492,144]}
+{"kind":"textbox","id":"sh/mx8vahwb","slide":1,"text":"业务服务层","textPreview":"业务服务层","textChars":5,"textLines":1,"bbox":[70,351,150,120]}
+{"kind":"textbox","id":"sh/nyhcjmxw","slide":1,"text":"用户与账号","textPreview":"用户与账号","textChars":5,"textLines":1,"bbox":[246,354,418,52.5]}
+{"kind":"textbox","id":"sh/0bqd87e5","slide":1,"text":"数字人档案","textPreview":"数字人档案","textChars":5,"textLines":1,"bbox":[676,354,418,52.5]}
+{"kind":"textbox","id":"sh/lwzuhcfq","slide":1,"text":"商品与 SKU","textPreview":"商品与 SKU","textChars":7,"textLines":1,"bbox":[1106,354,418,52.5]}
+{"kind":"textbox","id":"sh/1g725432","slide":1,"text":"虚拟试装","textPreview":"虚拟试装","textChars":4,"textLines":1,"bbox":[246,416.5,418,52.5]}
+{"kind":"textbox","id":"sh/gfy1wz2x","slide":1,"text":"收藏与试穿记录","textPreview":"收藏与试穿记录","textChars":7,"textLines":1,"bbox":[676,416.5,418,52.5]}
+{"kind":"textbox","id":"sh/fepk3elc","slide":1,"text":"资产与后台管理","textPreview":"资产与后台管理","textChars":7,"textLines":1,"bbox":[1106,416.5,418,52.5]}
+{"kind":"shape","id":"sh/etgju9kr","slide":1,"bbox":[54,495,1492,166]}
+{"kind":"textbox","id":"sh/ts721436","slide":1,"text":"智能体层","textPreview":"智能体层","textChars":4,"textLines":1,"bbox":[70,507,150,142]}
+{"kind":"textbox","id":"sh/sry1sz2l","slide":1,"text":"IntentPlanner\ndemo / LLM adapter","textPreview":"IntentPlanner | demo / LLM adapter","textChars":32,"textLines":2,"bbox":[246,529,418,54]}
+{"kind":"textbox","id":"sh/rq5kzul0","slide":1,"text":"search_products\n商品检索","textPreview":"search_products | 商品检索","textChars":20,"textLines":2,"bbox":[676,529,418,54]}
+{"kind":"textbox","id":"sh/6pwjqpkf","slide":1,"text":"recommend_size\n尺码推荐","textPreview":"recommend_size | 尺码推荐","textChars":19,"textLines":2,"bbox":[1106,529,418,54]}
+{"kind":"textbox","id":"sh/dor2xo3a","slide":1,"text":"check_outfit_compatibility\n搭配校验","textPreview":"check_outfit_compatibility | 搭配校验","textChars":31,"textLines":2,"bbox":[246,593,418,54]}
+{"kind":"textbox","id":"sh/cnil4j2p","slide":1,"text":"apply_outfit\n应用换装","textPreview":"apply_outfit | 应用换装","textChars":17,"textLines":2,"bbox":[676,593,418,54]}
+{"kind":"textbox","id":"sh/utczyl07","slide":1,"text":"tool_events + outfit_action\n可审计输出","textPreview":"tool_events + outfit_action | 可审计输出","textChars":33,"textLines":2,"bbox":[1106,593,418,54]}
+{"kind":"textbox","id":"sh/vul0rq1s","slide":1,"text":"大模型只负责理解需求与选择工具，不能直接修改数据库或编造商品信息","textPreview":"大模型只负责理解需求与选择工具，不能直接修改数据库或编造商品信息","textChars":32,"textLines":1,"bbox":[246,498,1278,28]}
+{"kind":"shape","id":"sh/wvuh0vid","slide":1,"bbox":[54,673,1492,116]}
+{"kind":"textbox","id":"sh/hw3it0jy","slide":1,"text":"算法服务层","textPreview":"算法服务层","textChars":5,"textLines":1,"bbox":[70,685,150,92]}
+{"kind":"textbox","id":"sh/mpszul0b","slide":1,"text":"人脸关键点检测","textPreview":"人脸关键点检测","textChars":7,"textLines":1,"bbox":[246,707,310.5,68]}
+{"kind":"textbox","id":"sh/nq1gnq1w","slide":1,"text":"照片参数估计","textPreview":"照片参数估计","textChars":6,"textLines":1,"bbox":[568.5,707,310.5,68]}
+{"kind":"textbox","id":"sh/8rahwbih","slide":1,"text":"身材与脸型参数映射","textPreview":"身材与脸型参数映射","textChars":9,"textLines":1,"bbox":[891,707,310.5,68]}
+{"kind":"textbox","id":"sh/9s3ypgjm","slide":1,"text":"尺码推荐算法","textPreview":"尺码推荐算法","textChars":6,"textLines":1,"bbox":[1213.5,707,310.5,68]}
+{"kind":"textbox","id":"sh/6lwz650f","slide":1,"text":"内部算法接口 /internal/v1；算法服务不保存业务数据","textPreview":"内部算法接口 /internal/v1；算法服务不保存业务数据","textChars":31,"textLines":1,"bbox":[246,676,1278,28]}
+{"kind":"shape","id":"sh/rm50za10","slide":1,"bbox":[54,801,1492,142]}
+{"kind":"textbox","id":"sh/relwvm5g","slide":1,"text":"数据与资产层","textPreview":"数据与资产层","textChars":6,"textLines":1,"bbox":[70,813,150,118]}
+{"kind":"textbox","id":"sh/qdcv2h4v","slide":1,"text":"MySQL 8.4\n用户、商品、记录","textPreview":"MySQL 8.4 | 用户、商品、记录","textChars":18,"textLines":2,"bbox":[246,816,310.5,113]}
+{"kind":"textbox","id":"sh/dg3excnm","slide":1,"text":"向量库（规划）\n商品语义检索","textPreview":"向量库（规划） | 商品语义检索","textChars":14,"textLines":2,"bbox":[568.5,816,310.5,113]}
+{"kind":"textbox","id":"sh/cfud47m1","slide":1,"text":"对象存储 / 本地文件\n照片、截图、贴图","textPreview":"对象存储 / 本地文件 | 照片、截图、贴图","textChars":20,"textLines":2,"bbox":[891,816,310.5,113]}
+{"kind":"textbox","id":"sh/3q1wr25k","slide":1,"text":"Blender 4.2 → GLB\n骨骼、Morph、服装","textPreview":"Blender 4.2 → GLB | 骨骼、Morph、服装","textChars":29,"textLines":2,"bbox":[1213.5,816,310.5,113]}
+{"kind":"shape","id":"sh/2psvyx4z","slide":1,"bbox":[138,223,26,18]}
+{"kind":"shape","id":"sh/pcjetcna","slide":1,"bbox":[138,325,26,18]}
+{"kind":"shape","id":"sh/4bad07mp","slide":1,"bbox":[138,481,26,18]}
+{"kind":"shape","id":"sh/nm5w365o","slide":1,"bbox":[138,659,26,18]}
+{"kind":"shape","id":"sh/mlwva143","slide":1,"bbox":[138,787,26,18]}
+{"kind":"textbox","id":"sh/kr6t4j2l","slide":1,"text":"请求与业务动作向下编排，结构化结果返回前端并更新 Three.js 数字人","textPreview":"请求与业务动作向下编排，结构化结果返回前端并更新 Three.js 数字人","textChars":37,"textLines":1,"bbox":[380,950,1140,30]}
+{"kind":"notes","id":"nt/mm12e4","slide":1,"text":""}
+{"kind":"slide","id":"sl/d5h2dv","slide":2,"title":"形镜 AI 变装系统总体技术架构","textShapes":15}
+{"kind":"textbox","id":"sh/ba1kfuxg","slide":2,"text":"形镜 AI 变装系统总体技术架构","textPreview":"形镜 AI 变装系统总体技术架构","textChars":16,"textLines":1,"bbox":[55,28,1490,48]}
+{"kind":"shape","id":"sh/cba18ze1","slide":2,"bbox":[520,112,1040,790]}
+{"kind":"textbox","id":"sh/dcj214fm","slide":2,"text":"开发机 / 课程答辩环境","textPreview":"开发机 / 课程答辩环境","textChars":12,"textLines":1,"bbox":[545,118,400,30]}
+{"kind":"textbox","id":"sh/2l8j2pwz","slide":2,"text":"浏览器客户端\n\nVue 3 + TypeScript\nThree.js + Pinia + Vite\n\n开发端口 5173","textPreview":"浏览器客户端 |  | Vue 3 + TypeScript | Three.js + Pinia + Vite |  | 开发端口 5173","textChars":61,"textLines":6,"bbox":[65,170,380,245]}
+{"kind":"textbox","id":"sh/3m10bux4","slide":2,"text":"业务服务 server\n\nFastAPI  /api/v1\n认证、业务规则、持久化\n智能体编排与工具白名单\n\n端口 8000","textPreview":"业务服务 server |  | FastAPI  /api/v1 | 认证、业务规则、持久化 | 智能体编排与工具白名单 |  | 端口 8000","textChars":62,"textLines":7,"bbox":[590,165,430,270]}
+{"kind":"textbox","id":"sh/ona14zep","slide":2,"text":"算法服务 ai-service\n\nFastAPI  /internal/v1\n关键点与参数估计\n尺码推荐算法\n\n端口 8001","textPreview":"算法服务 ai-service |  | FastAPI  /internal/v1 | 关键点与参数估计 | 尺码推荐算法 |  | 端口 8001","textChars":63,"textLines":7,"bbox":[1120,170,380,245]}
+{"kind":"textbox","id":"sh/pojid4fa","slide":2,"text":"3D 资产制作与发布\n\nBlender 4.2 LTS\n统一 Armature / Morph Target\n导出 glTF / GLB\n离线制作，不作为运行时服务","textPreview":"3D 资产制作与发布 |  | Blender 4.2 LTS | 统一 Armature / Morph Target | 导出 glTF / GLB | 离线制作，不作为运行时服务","textChars":82,"textLines":6,"bbox":[65,570,380,235]}
+{"kind":"textbox","id":"sh/mhcje9w3","slide":2,"text":"数据与文件\n\nMySQL 8.4（Docker Compose）  3306\n用户、商品、数字人、试穿记录\n\n本地文件 / 对象存储\nGLB、贴图、上传照片与截图","textPreview":"数据与文件 |  | MySQL 8.4（Docker Compose）  3306 | 用户、商品、数字人、试穿记录 |  | 本地文件 / 对象存储 | GLB、贴图、上传照片与截图","textChars":81,"textLines":7,"bbox":[590,545,430,285]}
+{"kind":"textbox","id":"sh/nilk7edo","slide":2,"text":"可替换大模型服务（可选）\n\n兼容 Chat Completions 协议\n只返回结构化意图\n商品、库存与尺码仍由服务端工具提供\n默认 demo planner 无需外部网络","textPreview":"可替换大模型服务（可选） |  | 兼容 Chat Completions 协议 | 只返回结构化意图 | 商品、库存与尺码仍由服务端工具提供 | 默认 demo planner 无需外部网络","textChars":86,"textLines":6,"bbox":[1120,560,380,255]}
+{"kind":"shape","id":"sh/rapkrqpw","slide":2,"bbox":[445,292.5,145,7.5]}
+{"kind":"textbox","id":"sh/qpgjil8r","slide":2,"text":"HTTP  /api/v1\nVite 开发代理","textPreview":"HTTP  /api/v1 | Vite 开发代理","textChars":23,"textLines":2,"bbox":[452,205,132,54]}
+{"kind":"shape","id":"sh/dcr2t072","slide":2,"bbox":[1020,292.5,100,7.5]}
+{"kind":"textbox","id":"sh/cbi1kvqh","slide":2,"text":"内部 HTTP\n/internal/v1","textPreview":"内部 HTTP | /internal/v1","textChars":20,"textLines":2,"bbox":[1018,205,102,54]}
+{"kind":"shape","id":"sh/ze9kvqp8","slide":2,"bbox":[805,435,0,110]}
+{"kind":"textbox","id":"sh/ed0jm58n","slide":2,"text":"SQLAlchemy / 文件访问","textPreview":"SQLAlchemy / 文件访问","textChars":17,"textLines":1,"bbox":[590,470,190,36]}
+{"kind":"shape","id":"sh/1gr2x07e","slide":2,"bbox":[805,435,505,125]}
+{"kind":"textbox","id":"sh/0fi1ovqt","slide":2,"text":"HTTPS（compatible 模式）","textPreview":"HTTPS（compatible 模式）","textChars":20,"textLines":1,"bbox":[1125,455,280,36]}
+{"kind":"shape","id":"sh/nitkzap4","slide":2,"bbox":[445,687.5,145,0]}
+{"kind":"textbox","id":"sh/mh0jq58j","slide":2,"text":"发布 GLB 与贴图","textPreview":"发布 GLB 与贴图","textChars":10,"textLines":1,"bbox":[448,600,132,36]}
+{"kind":"textbox","id":"sh/id4ni9sr","slide":2,"text":"Three.js 通过业务服务返回的资产地址加载 GLB 与贴图","textPreview":"Three.js 通过业务服务返回的资产地址加载 GLB 与贴图","textChars":32,"textLines":1,"bbox":[65,445,455,72]}
+{"kind":"textbox","id":"sh/jed4re9c","slide":2,"text":"约束：浏览器不直接访问算法服务；ai-service 不访问业务数据库","textPreview":"约束：浏览器不直接访问算法服务；ai-service 不访问业务数据库","textChars":35,"textLines":1,"bbox":[55,916,1490,40]}
+{"kind":"notes","id":"nt/d5h2dv","slide":2,"text":""}
